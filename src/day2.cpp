@@ -32,11 +32,11 @@ int TotalScore(const std::vector<std::pair<int, int>> &guide) {
   return total;
 }
 
-void Day1(const std::vector<std::pair<int, int>> &guide) {
+void Part1(const std::vector<std::pair<int, int>> &guide) {
   std::cout << "total: " << TotalScore(guide) << '\n';
 }
 
-void Day2(std::vector<std::pair<int, int>> &guide) {
+void Part2(std::vector<std::pair<int, int>> &guide) {
   std::vector<std::pair<int, int>> new_guide;
   std::transform(guide.begin(), guide.end(), std::back_inserter(new_guide),
                  [](auto round) {
@@ -50,6 +50,6 @@ void Day2(std::vector<std::pair<int, int>> &guide) {
 
 int main() {
   auto guide = ReadGuide();
-  Day1(guide);
-  Day2(guide);
+  Part1(guide);
+  Part2(guide);
 }
